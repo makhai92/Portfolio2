@@ -1,0 +1,118 @@
+.glass-donut-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #000000, #0e1315, #000000);
+  overflow: hidden;
+}
+/* 메뉴바 */
+:root {
+  color-scheme: light dark;
+}
+
+:root {
+  --background-color: #000000;
+  --text-color: #ffffff;
+  --primary-color: #8ebf4f;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #c9fd74;
+  }
+}
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.button-style {
+  width: 100px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 25px;
+  background-color: var(--primary-color);
+  color: #000;
+}
+.button-style .btn-container .element {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.button-style .btn-container .element:nth-of-type(2) {
+  background-color: #000;
+  color: var(--primary-color);
+}
+.button-style .btn-container .element:hover .menu-contain {
+  transform: rotateX(90deg);
+}
+.button-style .btn-container .element:hover .menu-contain span:nth-of-type(1) {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+.button-style .btn-container .element:hover .menu-contain span:nth-of-type(2) {
+  opacity: 1;
+}
+
+.menu-contain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.75s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.menu-contain span {
+  display: block;
+  transition: all 0.75s cubic-bezier(0.76, 0, 0.24, 1);
+  pointer-events: none;
+  text-transform: uppercase;
+}
+.menu-contain span:nth-of-type(2) {
+  position: absolute;
+  transform-origin: bottom center;
+  transform: rotateX(-90deg) translateY(9px);
+  opacity: 0;
+}
+
+section {
+  top: 20px;
+  right: 20px;
+  margin-top: 20px;
+}
+
+.container {
+  width: 100px;
+  height: 40px;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  border-radius: 25px;
+  background-color: var(--primary-color);
+  color: #000;
+}
+.container .menu-item {
+  height: 100%;
+  padding: 4rem 2rem;
+  opacity: 0;
+}
+.container .menu-item ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  align-items: flex-start;
+}
+.container .menu-item ul li {
+  opacity: 0;
+}
+.container .menu-item .socials {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.container .menu-item .socials li {
+  width: 50%;
+}
