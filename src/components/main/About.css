@@ -1,9 +1,9 @@
-html,
-body {
+.about-html,
+.about-body {
   height: 100%;
 }
 
-body {
+.about-body {
   align-items: center;
   background: #f4f7ff;
   color: #000;
@@ -17,7 +17,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-canvas {
+.about-canvas {
   height: 100%;
   left: 0;
   position: absolute;
@@ -25,25 +25,25 @@ canvas {
   width: 100%;
 }
 
-.page-wrap {
+.about-page-wrap {
   pointer-events: none;
 }
 
-.text-container {
+.about-text-container {
   max-width: 420px;
   width: 90%;
 }
 
-h1 {
+.about-page-wrap h1 {
   font-size: 22px;
 }
 
-p {
+.about-page-wrap p {
   font-size: 13px;
 }
 
 /* Website Link */
-.website-link {
+.about-website-link {
   background: #f8faff;
   border-radius: 50px 0 0 50px;
   bottom: 30px;
@@ -59,24 +59,9 @@ p {
   text-align: left;
   text-decoration: none;
 }
-.website-link__icon {
+.about-website-link__icon {
   left: -10px;
   position: absolute;
   top: -12px;
   width: 44px;
-}
-.website-link__name {
-  display: block;
-  font-size: 14px;
-  line-height: 14px;
-  margin: 5px 0 3px;
-}
-.website-link__last-name {
-  color: #55bada;
-}
-.website-link__message {
-  color: #8aa8c5;
-  display: block;
-  font-size: 7px;
-  line-height: 7px;
 }
