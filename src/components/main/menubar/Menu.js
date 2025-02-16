@@ -1,7 +1,5 @@
 import React, { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, Text, Environment } from "@react-three/drei";
 import gsap from "gsap";
 import "../Home.css";
 
