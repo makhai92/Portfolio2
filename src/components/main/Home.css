@@ -23,7 +23,7 @@
     --primary-color: #c9fd74;
   }
 }
-body {
+.main-body {
   background-color: var(--background-color);
   color: var(--text-color);
 }
