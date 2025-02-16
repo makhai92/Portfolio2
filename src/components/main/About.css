@@ -1,12 +1,13 @@
 .about-html,
 .about-body {
   height: 100%;
+  overflow: hidden;
 }
 
 .about-body {
   align-items: center;
   background: #f4f7ff;
-  color: #000;
+  color: #fff;
   display: flex;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
     Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -27,6 +28,7 @@
 
 .about-page-wrap {
   pointer-events: none;
+  font-weight: 800;
 }
 
 .about-text-container {
@@ -39,29 +41,42 @@
 }
 
 .about-page-wrap p {
-  font-size: 13px;
+  font-size: 1.2rem;
 }
 
 /* Website Link */
-.about-website-link {
-  background: #f8faff;
-  border-radius: 50px 0 0 50px;
-  bottom: 30px;
-  color: #324b77;
-  cursor: pointer;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  height: 34px;
-  filter: drop-shadow(2px 3px 4px rgba(0, 0, 0, 0.1));
-  padding: 0 20px 0 40px;
-  position: fixed;
-  right: 0;
-  text-align: left;
-  text-decoration: none;
+
+/* 글 */
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-left: -1100%;
 }
-.about-website-link__icon {
-  left: -10px;
-  position: absolute;
-  top: -12px;
-  width: 44px;
+
+.about-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-style: italic;
+  font-weight: 800;
+  color: #fff; /* 좀 더 하얀 색상 */
+}
+
+.intro-text {
+  font-style: italic;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.description {
+  margin-bottom: 2%;
+  font-style: italic;
+  font-size: 2rem;
+  line-height: 1.6;
+}
+.about-content h1,
+.about-content p {
+  text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000,
+    0.5px 0.5px 0 #000,
+    /* 주황빛 로즈골드 글로우 효과 */ 0 0 30px rgba(217, 142, 115, 1),
+    0 0 20px rgba(217, 142, 115, 1);
 }

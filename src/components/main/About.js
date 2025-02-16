@@ -173,8 +173,37 @@ const About = () => {
         <div className="about-body">
           <canvas id="about-canvas" ref={canvasRef}></canvas>
           <div className="about-page-wrap">
-            <h1>3D Rotation Matrix</h1>
-            <p>(move your mouse)</p>
+            <div className="about-content">
+              <h1>About Me</h1>
+              <p className="intro-text">
+                "안녕하세요, 개발자를 꿈꾸는 양창모입니다."
+              </p>
+
+              <p className="description">
+                우직하게 목표를 향해 지나온 하루하루가 쌓여 즐거움 가득 고민한
+                걸음씩 내딛은 도전의 발자취는 결국 꿈에 이르는 길입니다.
+                끊임없는 고민과 도전 속에서 우리는 예상치 못한 깊은 깨달음을
+                얻고,
+              </p>
+              <p className="description">
+                그 깨달음은 우리를 한층 더 성숙하게 만듭니다. 어려움 속에서도 매
+                순간 배우고, 실패를 통해 성장하는 경험들이 모여 오늘의 나를
+                만들어줍니다.
+              </p>
+
+              <p className="description">
+                세상의 변화는 빠르지만, 변함없이 우리에게 필요한 것은 꾸준한
+                노력과 끊임없는 학습입니다. 매 순간 자신을 돌아보고 도전하는
+                자세로 임한다면, 언젠가는 우리 모두가 원하는 그 자리에 도달할 수
+                있을 것이라 믿습니다.
+              </p>
+              <p className="description">
+                앞으로도 저는 변화하는 세상 속에서 매일 한 걸음씩, 자신을
+                갈고닦으며, 나와 당신, 그리고 우리 모두를 위한 최상의 해결책을
+                찾는 개발자가 되겠습니다. 우리가 함께 만들어갈 미래, 그 길
+                위에서 서로에게 영감을 주며 성장할 수 있기를 바랍니다.
+              </p>
+            </div>
           </div>
 
           <circle
