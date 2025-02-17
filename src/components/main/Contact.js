@@ -90,29 +90,35 @@ const Contact = () => {
         <div className="contact-body">
           <div className="envelope new">
             <div className="front">
-              <div className="stamp"></div>
+              <div className="stamp">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/128/8052/8052663.png"
+                  alt="stamp"
+                  className="stamp-image"
+                />
+              </div>
               <div className="mailme">
-                <p>Click and get in touch!</p>
-                <p>example@example.com</p>
+                <p>누르고 연락주세요!</p>
+                <p>makkai9210@gmail.com</p>
               </div>
             </div>
             <div className="back">
               <div className="letter">
                 <form className="mailform" onSubmit={handleSubmit}>
                   <div>
-                    <label htmlFor="name">Name</label>
+                    <label htmlFor="name">이름</label>
                     <input
                       type="text"
                       name="name"
                       size="40"
-                      placeholder="Name"
+                      placeholder="이름"
                       value={formData.name}
                       onChange={handleChange}
                       required
                     />
                   </div>
                   <div>
-                    <label htmlFor="emailadress">Email adress</label>
+                    <label htmlFor="emailadress">Email 주소</label>
                     <input
                       type="text"
                       name="email"
@@ -124,19 +130,19 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="message">Message</label>
+                    <label htmlFor="message">내용</label>
                     <textarea
                       name="message"
                       cols="40"
                       rows="5"
-                      placeholder="Message"
+                      placeholder="내용"
                       value={formData.message}
                       onChange={handleChange}
                       required
                     ></textarea>
                   </div>
                   <div>
-                    <input type="submit" value="Send" />
+                    <input type="submit" value="보내기" />
                   </div>
                 </form>
               </div>
@@ -149,8 +155,8 @@ const Contact = () => {
           <div className="notification">
             <div>
               <div>
-                <p>Message sent!</p>
-                <p>Write a new message</p>
+                <p>메일 전송완료!</p>
+                <p>새로운 메일 작성</p>
               </div>
             </div>
           </div>

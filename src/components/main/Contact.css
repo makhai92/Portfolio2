@@ -159,30 +159,13 @@ body {
   outline: none;
 }
 .envelope .front .stamp {
-  transform: translate3d(0, 0, 1px);
   position: absolute;
-  width: 80px;
-  height: 80px;
+  width: 100px;
   right: 10px;
   top: 10px;
-  padding: 10px;
-  background: radial-gradient(
-    rgba(0, 0, 0, 0) 0px,
-    rgba(0, 0, 0, 0) 4px,
-    #f6f6df 4px,
-    #f6f6df
-  );
-  background-size: 20px 20px;
-  background-position: -10px -10px;
+  padding: 0.4em;
 }
-.envelope .front .stamp:after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: #f2f2cf;
-  border-radius: 2px;
-}
+
 .envelope .front .mailme {
   transform: translate3d(0, 0, 1px);
   text-align: center;
