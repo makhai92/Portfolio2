@@ -76,6 +76,9 @@
         -webkit-transform: translate(-50%, -50%) rotateX(90deg);
         transform: translate(-50%, -50%) rotateX(90deg);
         color: #fff;
+        text-align: left;
+        white-space: nowrap;
+        word-break: keep-all;
       }
 
       #ground {
@@ -93,8 +96,6 @@
           transparent
         );
       }
-
-      
 
       @-webkit-keyframes spin {
         from {
@@ -145,53 +146,57 @@
       <div id="spin-container">
         <!-- Add your images (or video) here -->
         <img
-          src="https://images.pexels.com/photos/206395/pexels-photo-206395.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          alt=""
+          src="./img/caloriebus_logo.png"
+          alt="Clickable Image"
+  style="cursor: pointer;"
+  onclick="window.open('https://github.com/makhai92/Calorie_Bus')"
         />
         <img
-          src="https://images.pexels.com/photos/1391498/pexels-photo-1391498.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          alt=""
+        src="./img/SAS_logo.png"
+        alt="Clickable Image"
+        style="cursor: pointer;"
+        onclick="window.open('https://github.com/makhai92/SAS')"
         />
         <img
-          src="https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          alt=""
+        src="./img/GooGoo.jpeg"
+        alt="Clickable Image"
+        style="cursor: pointer;"
+        onclick="window.open('https://github.com/makhai92/GooGoo-Landing')"
         />
         <img
-          src="https://images.pexels.com/photos/1758144/pexels-photo-1758144.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          alt=""
+        src="./img/Portfolio1logo.png"
+        alt="Clickable Image"
+        style="cursor: pointer;"
+        onclick="window.open('http://yangs.dothome.co.kr/portfolio/')"
         />
         <img
-          src="https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          alt=""
+        src="./img/Portfolio2logo.png"
+        alt="Clickable Image"
+        style="cursor: pointer;"
+        onclick="window.open('https://main--yangsprotfolio2.netlify.app/')"
         />
         <img
-          src="https://images.pexels.com/photos/1462636/pexels-photo-1462636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          alt=""
+        src="./img/work in progress.png"
+        alt="Clickable Image"
+        style="cursor: pointer;"
+        onclick="window.open('https://github.com/makhai92')"
         />
-
-        <!-- Example image with link -->
-        <a
-          target="_blank"
-          href="https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg"
-        >
-          <img
-            src="https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-            alt=""
-          />
-        </a>
+        <img
+        src="./img/ready.png"
+        alt="Clickable Image"
+        style="cursor: pointer;"
+        onclick="window.open('https://github.com/makhai92')"
+        />
 
         <!-- Example add video  -->
-        
 
         <!-- Text at center of ground -->
-        <p>3D Tiktok Carousel</p>
+        <p>보고싶은 </br>사이트를 </br>클릭해주세요</p>
       </div>
       <div id="ground"></div>
     </div>
 
     <div id="music-container"></div>
-
-    </style>
 
     <script>
       // Author: Hoang Tran (https://www.facebook.com/profile.php?id=100004848287494)
@@ -279,16 +284,14 @@
         )}s infinite linear`;
       }
 
-      
-
       // setup events
-      document.onpointerdown = function(e) {
+      document.onpointerdown = function (e) {
         clearInterval(odrag.timer);
         e = e || window.event;
         var sX = e.clientX,
           sY = e.clientY;
 
-        this.onpointermove = function(e) {
+        this.onpointermove = function (e) {
           e = e || window.event;
           var nX = e.clientX,
             nY = e.clientY;
@@ -301,8 +304,8 @@
           sY = nY;
         };
 
-        this.onpointerup = function(e) {
-          odrag.timer = setInterval(function() {
+        this.onpointerup = function (e) {
+          odrag.timer = setInterval(function () {
             desX *= 0.95;
             desY *= 0.95;
             tX += desX * 0.1;
@@ -320,7 +323,7 @@
         return false;
       };
 
-      document.onmousewheel = function(e) {
+      document.onmousewheel = function (e) {
         e = e || window.event;
         var d = e.wheelDelta / 20 || -e.detail;
         radius += d;
