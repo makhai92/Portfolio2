@@ -1,9 +1,36 @@
 import $ from "jquery";
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Menu from "./menubar/Menu";
+import emailjs from "emailjs-com";
 import "./Contact.css";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  // 입력 변경 핸들러
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  // 폼 제출 핸들러 (emailjs 사용)
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    // EmailJS 서비스 정보
+    const serviceID = "lucky92";
+    const templateID = "template_f02m4h9";
+    const publicKey = "1RNc-JVK21uORNll7";
+
+    // EmailJS 전송 요청
+    emailjs.send(serviceID, templateID, formData, publicKey);
+
+    // 애니메이션 전환
+    $(".envelope").removeClass("open").addClass("send");
+  };
   useEffect(() => {
     // jQuery 코드 원본을 그대로 실행
     if (!$(".envelope").hasClass("open")) {
@@ -71,7 +98,7 @@ const Contact = () => {
             </div>
             <div className="back">
               <div className="letter">
-                <form className="mailform">
+                <form className="mailform" onSubmit={handleSubmit}>
                   <div>
                     <label htmlFor="name">Name</label>
                     <input
@@ -79,15 +106,21 @@ const Contact = () => {
                       name="name"
                       size="40"
                       placeholder="Name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
                     />
                   </div>
                   <div>
                     <label htmlFor="emailadress">Email adress</label>
                     <input
                       type="text"
-                      name="emailadress"
+                      name="email"
                       size="40"
-                      placeholder="Email adress"
+                      placeholder="Email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
                     />
                   </div>
                   <div>
@@ -97,6 +130,9 @@ const Contact = () => {
                       cols="40"
                       rows="5"
                       placeholder="Message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
                     ></textarea>
                   </div>
                   <div>
