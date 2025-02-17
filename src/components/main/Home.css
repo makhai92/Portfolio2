@@ -116,3 +116,6 @@ section {
 .container .menu-item .socials li {
   width: 50%;
 }
+body {
+  overflow: hidden !important;
+}

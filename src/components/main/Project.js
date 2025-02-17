@@ -10,7 +10,7 @@ const Project = () => {
             src={`${process.env.PUBLIC_URL}/carousel.html`}
             title="External HTML"
             width="100%"
-            height="940px"
+            height="950px"
             style={{ border: "none" }}
           ></iframe>
           <div className="menubar">

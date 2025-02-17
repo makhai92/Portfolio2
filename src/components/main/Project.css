@@ -49,6 +49,14 @@
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
+iframe {
+  overflow: hidden !important;
+  scrollbar-width: none;
+}
+
+iframe::-webkit-scrollbar {
+  display: none;
+}
 
 #drag-container,
 #spin-container {
