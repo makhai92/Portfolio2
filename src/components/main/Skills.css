@@ -1,3 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+/* Applying CSS to sphere */
+.tagcloud {
+  display: inline-block;
+  top: -5%;
+  left: -1%;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.3rem;
+}
+
+/* Sphere 컨테이너 스타일 */
+.sphere {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Arial", sans-serif;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #ff5733;
+  cursor: pointer;
+}
+
+/* Sphere 안의 텍스트 호버 시 색상 변경 */
+.sphere span {
+  transition: color 0.3s ease;
+}
+
+.sphere span:hover {
+  color: #ffc300; /* 호버 시 초록색으로 변경 */
+}
+
+/* 전체 페이지 스타일 */
 .skills-all {
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #fff;
+}
+
+.menubar {
+  margin-bottom: 20px;
 }
