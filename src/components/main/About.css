@@ -27,7 +27,7 @@
 }
 
 .about-page-wrap {
-  pointer-events: none;
+  pointer-events: auto;
   font-weight: 800;
 }
 
@@ -55,7 +55,8 @@
 
 .about-content h1 {
   font-size: 2.5rem;
-  margin-bottom: 20px;
+  margin-top: -10%;
+  margin-bottom: 5%;
   font-style: italic;
   font-weight: 800;
   color: #fff; /* 좀 더 하얀 색상 */
